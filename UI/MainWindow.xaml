@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
+        xmlns:views="clr-namespace:UI.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TabControl Name="TabControl">
+            <TabItem Name="Login" Header="Login">
+                <views:UserLoginPanel/>
+            </TabItem>
+            <TabItem Name="EditRecipe" Header="Edit">
+                <views:EditRecipeView/>
+            </TabItem>
+            <TabItem Name="ShowRecipe" Header="Search">
+                <views:RecipeSelectionPanelView></views:RecipeSelectionPanelView>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
